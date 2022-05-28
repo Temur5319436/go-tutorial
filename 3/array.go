@@ -42,7 +42,7 @@ func main() {
 	fmt.Println("Result first array : ", firstArray)
 	fmt.Println("Result second array: ", copyArray)
 
-	//Arraydan nusxa olishning ikkinchi yo'li.
+	//Arraydan nusxa olishning ikkinchi yo	'li.
 	//Bu misolda copy array birinchi arrayning xotiradagi joyiga link bo'lib qoladi.
 	secondArray := [...]string{"Alijon", "Valijon", "Shoxrus"}
 	fmt.Println("\nCopy array second way:\nFirst array : ", secondArray)
@@ -51,5 +51,4 @@ func main() {
 	secondCopyArray[0] = "Nozimjon"
 	fmt.Println("Result first array : ", secondArray)
 	fmt.Println("Result second array : ", *secondCopyArray)
-
 }
