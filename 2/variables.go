@@ -20,4 +20,8 @@ func main() {
 	//Bir nechta o'zgaruvchilari qisqa ko'rinishda e'lom qilish
 	g, h := 10, 2
 	fmt.Println("g / h = ", g/h)
+
+	//Constant'larni e'lon qilish
+	const PI = 3.14
+	fmt.Println("PI:", PI)
 }
