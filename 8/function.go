@@ -15,8 +15,22 @@ func main() {
 	sqrtValue, error := sqrt(92)
 	if error != nil {
 		fmt.Println(error)
+	} else {
+		fmt.Println(sqrtValue)
 	}
-	fmt.Println(sqrtValue)
+
+	//Function'ga argument berishni birinchi yo'qli
+	a, b := 10, 12
+	fmt.Println("\nFunction'ga argument berishni birinchi yo'qli")
+	fmt.Println("a:", a, "b:", b)
+	swap(a, b)
+	fmt.Println("a:", a, "b:", b)
+
+	//Function'ga argument berishni ikkinchi yo'li
+	fmt.Println("\nFunction'ga argument berishni ikkinchi yo'li")
+	fmt.Println("a:", a, "b:", b)
+	swapByReference(&a, &b)
+	fmt.Println("a:", a, "b:", b)
 }
 
 //Oddiy function
@@ -30,4 +44,16 @@ func sqrt(number float64) (float64, error) {
 		return 0, errors.New("Argument sifatida manfiy qiymat berilmoqda")
 	}
 	return math.Sqrt(number), nil
+}
+
+func swap(a int, b int) {
+	o := a
+	a = b
+	b = o
+}
+
+func swapByReference(a, b *int) {
+	o := *a
+	*a = *b
+	*b = o
 }
