@@ -13,7 +13,7 @@ type banana struct {
 	Color, Make          string
 	Experience, MakeTime time.Time
 	Width                float64
-	eit                  []animal
+	eit                  [2]animal
 }
 
 func main() {
@@ -24,7 +24,7 @@ func main() {
 		Experience: time.Now(),
 		MakeTime:   time.Now(),
 		Width:      100,
-		eit:        []animal{animal{"Monkey"}, animal{"Human"}},
+		eit:        [2]animal{animal{"Monkey"}, animal{"Human"}},
 	}
 
 	fmt.Println(secondBanana)
